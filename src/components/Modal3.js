@@ -28,6 +28,10 @@ const Modal3 = (props) => {
   const { fullName, email, phone, problem } = form;
 
   const { urls } = props;
+
+  console.log(urls);
+
+  console.log(form);
   return (
     <div>
       <form
