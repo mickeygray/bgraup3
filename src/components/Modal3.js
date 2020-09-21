@@ -7,6 +7,7 @@ const Modal3 = (props) => {
       email: "",
       phone: "",
       problem: "",
+      url: "",
     });
   }, []);
 
@@ -15,6 +16,7 @@ const Modal3 = (props) => {
     email: "",
     phone: "",
     problem: "",
+    url: "",
   });
 
   const onChange = (e) =>
@@ -25,6 +27,7 @@ const Modal3 = (props) => {
 
   const { fullName, email, phone, problem } = form;
 
+  const urls = window.location.href;
   return (
     <div>
       <form
@@ -57,6 +60,12 @@ const Modal3 = (props) => {
           placeholder='Phone Number'
           onChange={onChange}
           value={phone}
+        />
+        <input
+          type='text'
+          name='url'
+          style={{ display: "none" }}
+          value={{ urls }}
         />
         <label htmlFor='years'>What information do you have?</label>
         <textarea
