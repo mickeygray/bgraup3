@@ -22,7 +22,7 @@ const Home = () => {
   }, []);
   const toggleModal = useCallback(() => {
     setModal((prevState) => !prevState);
-  });
+  }, []);
 
   return (
     <div>
