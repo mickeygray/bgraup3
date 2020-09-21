@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Modal3 from "./Modal3";
 import andruw1 from "../images/andruw1.jpg";
 
@@ -20,6 +20,9 @@ const Home = () => {
       setUrls(window.location.href);
     }
   }, []);
+  const toggleModal = useCallback(() => {
+    setModal((prevState) => !prevState);
+  });
 
   return (
     <div>
@@ -86,7 +89,7 @@ const Home = () => {
       <br />
       {modal ? (
         <div className='container'>
-          <Modal3 urls={urls} />
+          <Modal3 toggleModal={toggleModal} urls={urls} />
         </div>
       ) : (
         ""

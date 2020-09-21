@@ -33,15 +33,16 @@ const Modal3 = (props) => {
 
   console.log(form);
   return (
-    <div>
+    <div className='card'>
       <form
+        className='form-text'
         name='form'
         method='post'
         action='/thanks/'
         data-netlify='true'
         data-netlify-honeypot='bot-field'>
         <span style={{ float: "right" }}>
-          <button onClick={props.toggleModal3}> X</button>
+          <button onClick={props.toggleModal}> X</button>
         </span>
         <input type='hidden' name='form-name' value='form' />
         <input
