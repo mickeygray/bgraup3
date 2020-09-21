@@ -8,7 +8,7 @@ import steve2 from "../images/steve2.JPG";
 
 const Home = () => {
   const [modal, setModal] = useState(false);
-
+  console.log(window.location.href);
   const onClick = (e) => {
     setModal((prevState) => !prevState);
   };
