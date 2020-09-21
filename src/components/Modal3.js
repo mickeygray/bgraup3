@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 
 const Modal3 = (props) => {
+  const { urls } = props;
+
   useEffect(() => {
     setForm({
       fullName: "",
       email: "",
       phone: "",
       problem: "",
-      url: "",
+      url: urls,
     });
   }, []);
 
@@ -16,7 +18,7 @@ const Modal3 = (props) => {
     email: "",
     phone: "",
     problem: "",
-    url: "",
+    url: urls,
   });
 
   const onChange = (e) =>
@@ -26,8 +28,6 @@ const Modal3 = (props) => {
     });
 
   const { fullName, email, phone, problem } = form;
-
-  const { urls } = props;
 
   console.log(urls);
 
@@ -69,7 +69,7 @@ const Modal3 = (props) => {
           type='text'
           name='url'
           style={{ display: "none" }}
-          value={{ urls }}
+          value={urls}
         />
         <label htmlFor='years'>What information do you have?</label>
         <textarea
