@@ -11,7 +11,7 @@ const Modal3 = (props) => {
       problem: "",
       url: urls,
     });
-  }, []);
+  }, [urls]);
 
   const [form, setForm] = useState({
     fullName: "",
