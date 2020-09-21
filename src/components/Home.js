@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Modal3 from "./Modal3";
 import andruw1 from "../images/andruw1.jpg";
 
