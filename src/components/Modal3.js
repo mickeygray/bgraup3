@@ -27,7 +27,7 @@ const Modal3 = (props) => {
 
   const { fullName, email, phone, problem } = form;
 
-  const urls = window.location.href;
+  const { urls } = props;
   return (
     <div>
       <form

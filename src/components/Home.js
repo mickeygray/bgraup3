@@ -12,6 +12,15 @@ const Home = () => {
   const onClick = (e) => {
     setModal((prevState) => !prevState);
   };
+
+  const [urls, setUrls] = useState("");
+
+  useEffect(() => {
+    if (window.location.href.length > 0) {
+      setUrls(window.location.href);
+    }
+  }, []);
+
   return (
     <div>
       <h1 className='all-center text-danger'>
@@ -77,7 +86,7 @@ const Home = () => {
       <br />
       {modal ? (
         <div className='container'>
-          <Modal3 />
+          <Modal3 urls={urls} />
         </div>
       ) : (
         ""
